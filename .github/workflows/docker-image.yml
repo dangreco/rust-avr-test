@@ -18,7 +18,7 @@ jobs:
       run:
         docker build . --file .github/Dockerfile.ci --tag rust-avr-ci:$GITHUB_RUN_NUMBER
 
-    - name: Compile the crate for the AVR atmega328p
+    - name: Compile the crate for the AVR atmega2560
       run:
         docker run rust-avr-ci:$GITHUB_RUN_NUMBER build -Z build-std=core --target avr-atmega2560.json --release --all --bins --examples
 

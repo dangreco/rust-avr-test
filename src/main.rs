@@ -9,6 +9,8 @@ use core::intrinsics::volatile_store;
 use avr_delay::delay_ms;
 use avrd::atmega2560::*;
 
+mod scheduler;
+
 fn delay(ms: u32) {
   for _ in 0..(ms / 16) { // idk
     delay_ms(100)
