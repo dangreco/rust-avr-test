@@ -8,7 +8,6 @@ edition = "2018"
 
 [dependencies]
 avrd = "0.1.2"
-avr_delay = { git = "https://github.com/avr-rust/delay" }
 
 [profile.dev]
 panic = "abort"
